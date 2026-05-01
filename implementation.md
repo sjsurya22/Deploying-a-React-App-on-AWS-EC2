@@ -1,4 +1,4 @@
-Deploying a React+Vite App on AWS EC2
+**Deploying a React+Vite App on AWS EC2**
 
 This guide will help you deploy your React app on an AWS EC2 instance using Ubuntu.
 
@@ -14,32 +14,39 @@ Allow SSH (Port 22) for remote login.
 2️⃣ Connect to Your EC2 Instance
 Once your instance is running, connect via SSH using your key pair:
 
-ssh -i your-key.pem ubuntu@your-ec2-public-ip
+**ssh -i your-key.pem ubuntu@your-ec2-public-ip**
 
 3️⃣ Set Up the Environment
 Update Ubuntu
 Run the following command to update system packages:
 
-sudo apt-get update && sudo apt-get upgrade -y
+**sudo apt-get update && sudo apt-get upgrade -y**
+
 By default, Ubuntu does not have npm installed. Install it using:
 
-sudo apt install npm -y
+**sudo apt install npm -y**
+
 4️⃣ Deploy Your React App
 Clone Your Repository
 
-git clone <your-repository-link>
+**git clone <your-repository-link>**
+
 Navigate to Your Project Directory
 
-cd your-project-name
+**cd your-project-name**
+
 Install Dependencies
 
-npm install
+**npm install**
+
 Use --host Flag to Expose Vite Server on EC2
 
-npm run dev -- --host
+**npm run dev -- --host**
+
 Start the React App
 
-npm run dev
+**npm run dev**
+
 5️⃣ Handling EC2 Public IP Changes
 By default, AWS assigns a dynamic public IP that changes when the instance is restarted. To keep the same IP:
 
